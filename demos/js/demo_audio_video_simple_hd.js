@@ -27,7 +27,7 @@ var selfEasyrtcid = "";
 
 
 function connect() {
-    easyrtc.setVideoDims(1280,720);
+    easyrtc.setVideoDims(320,240);
     easyrtc.enableDebug(false);
     easyrtc.setRoomOccupantListener(convertListToButtons);
     easyrtc.easyApp("easyrtc.videoChatHd", "selfVideo", ["callerVideo"], loginSuccess, loginFailure);
@@ -76,7 +76,7 @@ function performCall(otherEasyrtcid) {
 
 function loginSuccess(easyrtcid) {
     selfEasyrtcid = easyrtcid;
-    document.getElementById("iam").innerHTML = "I am " + easyrtc.cleanId(easyrtcid);
+    document.getElementById("iam").innerHTML = "Soy " + easyrtc.cleanId(easyrtcid);
 }
 
 
